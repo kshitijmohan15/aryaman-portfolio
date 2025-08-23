@@ -63,7 +63,7 @@ export default function About() {
                 {[1,2,3,4,5,6].map((num) => (
                   <div key={num} className="relative w-full pb-[100%]">
                     <Image
-                      src={`/collage/${num}.png`}
+                      src={`https://storage.googleapis.com/portfolio-pdfs-dev/aryaman-portfolio/collage/${num}.png`}
                       alt={`Website Design ${num}`}
                       fill
                       sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16.67vw"
@@ -78,7 +78,7 @@ export default function About() {
                 {[7,8,17,10,11].map((num) => (
                   <div key={num} className="relative w-full pb-[100%]">
                     <Image
-                      src={`/collage/${num}.png`}
+                      src={`https://storage.googleapis.com/portfolio-pdfs-dev/aryaman-portfolio/collage/${num}.png`}
                       alt={`Website Design ${num}`}
                       fill
                       sizes="(max-width: 768px) 50vw, 20vw"
@@ -93,7 +93,7 @@ export default function About() {
                 {[12,13,14,15,16,9].map((num) => (
                   <div key={num} className="relative w-full pb-[100%]">
                     <Image
-                      src={`/collage/${num}.png`}
+                      src={`https://storage.googleapis.com/portfolio-pdfs-dev/aryaman-portfolio/collage/${num}.png`}
                       alt={`Website Design ${num}`}
                       fill
                       sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16.67vw"

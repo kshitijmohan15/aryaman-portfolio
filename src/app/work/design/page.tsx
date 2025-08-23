@@ -27,16 +27,19 @@ export default function DesignPage() {
           />
         </Card>
 
-        <Card className="overflow-hidden">
-          <Image
-            src="/design/lyna.png"
+        <Link href="/work/design/lyna">
+          <Card className="overflow-hidden">
+            <Image
+              src="/design/lyna.png"
             alt="Lyna Lighting Solutions"
             width={600}
             height={400}
             className="w-full h-auto object-cover"
-          />
-        </Card>
+            />
+          </Card>
+        </Link>
 
+        <Link href="/work/design/prepr">
         <Card className="overflow-hidden">
           <Image
             src="/design/prepr.png"
@@ -44,9 +47,10 @@ export default function DesignPage() {
             width={600}
             height={400}
             className="w-full h-auto object-cover"
-          />
-        </Card>
-
+            />
+          </Card>
+        </Link>
+        <Link href="/work/design/sytem-thinking">
         <Card className="overflow-hidden">
           <Image
             src="/design/farmers.png"
@@ -56,6 +60,7 @@ export default function DesignPage() {
             className="w-full h-auto object-cover"
           />
         </Card>
+        </Link>
       </div>
       <CircleFooter />
     </main>
