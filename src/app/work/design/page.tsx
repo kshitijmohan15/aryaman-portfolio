@@ -50,7 +50,7 @@ export default function DesignPage() {
             />
           </Card>
         </Link>
-        <Link href="/work/design/sytem-thinking">
+        <Link href="/work/design/system-thinking">
         <Card className="overflow-hidden">
           <Image
             src="/design/farmers.png"
