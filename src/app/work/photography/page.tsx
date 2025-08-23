@@ -17,15 +17,17 @@ export default function PhotographyPage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card className="overflow-hidden">
-          <Image
-            src="/photography/lanchi.png"
+        <Link href="/work/photography/lanchi">
+          <Card className="overflow-hidden cursor-pointer">
+            <Image
+              src="/photography/lanchi.png"
             alt="Lanchi Photography"
             width={600}
             height={400}
             className="w-full h-auto object-cover"
-          />
-        </Card>
+            />
+          </Card>
+        </Link>
       </div>
       <CircleFooter />
     </main>

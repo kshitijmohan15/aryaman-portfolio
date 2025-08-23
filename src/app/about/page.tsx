@@ -37,14 +37,15 @@ export default function About() {
             </div>
             <div className="flex flex-col gap-6">
               <p className="w-full lg:w-[700px] text-lg lg:text-xl leading-6 font-light">
-                Every morning, the small town buzzed to life as the sun spilled golden light over
-                rooftops and fields. Children raced to school, their laughter echoing down narrow
-                lanes, while shopkeepers raised shutters and arranged fresh produce with care. In
-                the tea stall at the corner, regulars gathered, sipping chai and debating cricket
-                scores. An old radio crackled with familiar tunes, blending into the background hum
-                of activity. A dog dozed near the temple steps, unfazed by the bustle. Life here
-                moved in rhythms both old and comforting—where change arrived slowly, wrapped in
-                routine and stories passed down like heirlooms.
+                Born and raised in Mumbai, I&apos;m currently studying <b>Industrial Design</b> at the <strong>National Institute of Design, Andhra Pradesh</strong>.
+                <br />
+                <br />
+                I&apos;m passionate about form development, CMF, product and object design, interior and lighting, design research, systems thinking, and user experience.
+                <br />
+                With a background in visual arts, painting, and photography, I&apos;ve built my skills in visual storytelling, concept development, and aesthetic detailing.
+                <br />
+                <br />
+                A lifelong superhero fan and lover of films, I approach design with empathy, imagination, and a strong moral compass believing it can drive meaningful change at every level of interaction.
               </p>
               <button
                 type="button"
@@ -54,6 +55,54 @@ export default function About() {
               </button>
             </div>
           </div>
+        </section>
+          <section className="mt-16 w-full">
+            <div className="flex flex-col w-full">
+              {/* First row - 6 images */}
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 w-full">
+                {[1,2,3,4,5,6].map((num) => (
+                  <div key={num} className="relative w-full pb-[100%]">
+                    <Image
+                      src={`/collage/${num}.png`}
+                      alt={`Website Design ${num}`}
+                      fill
+                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16.67vw"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+              
+              {/* Second row - 5 images */}
+              <div className="grid grid-cols-2 md:grid-cols-5 w-full">
+                {[7,8,17,10,11].map((num) => (
+                  <div key={num} className="relative w-full pb-[100%]">
+                    <Image
+                      src={`/collage/${num}.png`}
+                      alt={`Website Design ${num}`}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 20vw"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+              
+              {/* Third row - remaining images */}
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 w-full">
+                {[12,13,14,15,16,9].map((num) => (
+                  <div key={num} className="relative w-full pb-[100%]">
+                    <Image
+                      src={`/collage/${num}.png`}
+                      alt={`Website Design ${num}`}
+                      fill
+                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16.67vw"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
         </section>
       </div>
     </div>
