@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Card from '@/components/ui/card';
-import MovingCircles from '@/components/custom/moving-circles';
+import Image from "next/image";
+import Card from "@/components/ui/card";
+import MovingCircles from "@/components/custom/moving-circles";
 
 export default function Home() {
   return (
@@ -23,11 +23,10 @@ export default function Home() {
               <h1 className="text-4xl font-bold md:text-6xl">I'm Aryaman.</h1>
             </div>
             <p className="mt-4 max-w-[500px] text-xl leading-none font-light">
-              Welcome to my portfolio - a space where designs meet purpose and creativity. Here,
-              you'll find a collection of thoughtful work that reflects my passion for solving
-              real-world problems through intuitive and impactful visuals. The About Me section of
-              my portfolio is a space where I can share my story, my journey, and my passion for
-              design.
+              I'm an industrial designer and a creative. This is a glimpse into
+              the things I think about, build, and obsess over from objects and
+              products to stories and systems. It's all rooted in form,
+              function, and the intent to design with purpose.
             </p>
           </div>
         </Card>
