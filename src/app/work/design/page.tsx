@@ -11,8 +11,13 @@ export default function DesignPage() {
   return (
     <main className="container mx-auto px-4 py-8 flex flex-col gap-12">
       <div className="flex items-center gap-4 mb-12">
-        <Link href="/work" className="hover:opacity-80">
-          <MoveLeft className='text-red-500 w-10 h-10'></MoveLeft>
+        <Link href="/work">
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            transition={{ duration: 0.2 }}
+          >
+            <MoveLeft className='text-red-500 w-10 h-10 hover:text-black transition-colors duration-200'></MoveLeft>
+          </motion.div>
         </Link>
         <div className="flex items-center gap-4 w-full justify-between">
           <h1 className="text-4xl font-bold">Design</h1>

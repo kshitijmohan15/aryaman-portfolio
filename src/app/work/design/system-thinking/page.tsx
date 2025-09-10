@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import { MoveLeft } from "lucide-react";
+import { motion } from 'framer-motion';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -11,8 +14,13 @@ export default function LynaPage() {
   return (
     <main className="container mx-auto px-4 py-8">
       <div className="flex items-center gap-4 mb-8">
-        <Link href="/work/design" className="hover:opacity-80">
-          <MoveLeft className='text-red-500 w-10 h-10' />
+        <Link href="/work/design">
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            transition={{ duration: 0.2 }}
+          >
+            <MoveLeft className='text-red-500 w-10 h-10 hover:text-black transition-colors duration-200' />
+          </motion.div>
         </Link>
         <h1 className="text-4xl font-bold">Prepr Pitch Deck</h1>
       </div>

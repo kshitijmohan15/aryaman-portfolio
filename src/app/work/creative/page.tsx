@@ -11,8 +11,13 @@ export default function CreativePage() {
   return (
     <main className="container mx-auto flex flex-col gap-12 px-4 py-8">
       <div className="mb-12 flex items-center gap-4">
-        <Link href="/work" className="hover:opacity-80">
-          <MoveLeft className="h-10 w-10 text-red-500"></MoveLeft>
+        <Link href="/work">
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            transition={{ duration: 0.2 }}
+          >
+            <MoveLeft className="h-10 w-10 text-red-500 hover:text-black transition-colors duration-200"></MoveLeft>
+          </motion.div>
         </Link>
         <div className="flex items-center gap-4 w-full justify-between">
           <h1 className="text-4xl font-bold">Creative</h1>
