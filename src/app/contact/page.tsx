@@ -1,13 +1,26 @@
+'use client';
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function Contact() {
   return (
     <div className="mx-auto max-w-7xl pt-16 px-4 sm:pl-4">
-      <section>
-        <h1 className="text-[32px] sm:text-[44px] font-[700] tracking-[0%]">
-          <span>Let's connect</span> •<span className="text-[#ED1C24]"> कनेक्ट करूया</span> •{' '}
-          <span>Let's connect</span> • <span className="text-[#ED1C24]">कनेक्ट करते हैं</span> •
-        </h1>
+      <section className="overflow-hidden">
+        <div className="flex w-max animate-[scrollText_15s_linear_infinite]">
+          <h1 className="text-[32px] sm:text-[44px] font-[700] tracking-[0%] whitespace-nowrap mr-8">
+            <span>Let's connect</span> •<span className="text-[#ED1C24]"> कनेक्ट करूया</span> •{' '}
+            <span>Let's connect</span> • <span className="text-[#ED1C24]">कनेक्ट करते हैं</span> •{' '}
+            <span>Let's connect</span> •<span className="text-[#ED1C24]"> कनेक्ट करूया</span> •{' '}
+            <span>Let's connect</span> • <span className="text-[#ED1C24]">कनेक्ट करते हैं</span> •
+          </h1>
+          <h1 className="text-[32px] sm:text-[44px] font-[700] tracking-[0%] whitespace-nowrap mr-8">
+            <span>Let's connect</span> •<span className="text-[#ED1C24]"> कनेक्ट करूया</span> •{' '}
+            <span>Let's connect</span> • <span className="text-[#ED1C24]">कनेक्ट करते हैं</span> •{' '}
+            <span>Let's connect</span> •<span className="text-[#ED1C24]"> कनेक्ट करूया</span> •{' '}
+            <span>Let's connect</span> • <span className="text-[#ED1C24]">कनेक्ट करते हैं</span> •
+          </h1>
+        </div>
       </section>
       <section className="mt-12 flex flex-col lg:flex-row justify-between">
         <div className="flex-1 lg:pr-8 mb-8 lg:mb-0">
