@@ -3,12 +3,6 @@
 import Link from 'next/link';
 import { MoveLeft } from "lucide-react";
 import { motion } from 'framer-motion';
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Prepr Pitch Deck | Aryaman Portfolio',
-  description: 'Prepr application pitch deck - UX/UI design case study',
-};
 
 export default function LynaPage() {
   return (
