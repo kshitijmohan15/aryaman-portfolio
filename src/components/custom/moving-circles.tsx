@@ -55,7 +55,7 @@ const CircleRow = ({ items, direction }: { items: CircleItem[]; direction: 'left
     <div className="relative w-full">
       <div className="flex w-max">
         <div
-          className={`flex gap-0 ${direction === 'left' ? 'animate-[moveLeft_30s_linear_infinite]' : 'animate-[moveRight_30s_linear_infinite]'}`}
+          className={`flex gap-0 ${direction === 'left' ? 'animate-[moveLeft_10s_linear_infinite]' : 'animate-[moveRight_10s_linear_infinite]'}`}
         >
           {repeatedItems.map((item, index) => (
             <div
@@ -78,7 +78,7 @@ const CircleRow = ({ items, direction }: { items: CircleItem[]; direction: 'left
           ))}
         </div>
         <div
-          className={`flex gap-0 ${direction === 'left' ? 'animate-[moveLeft_30s_linear_infinite]' : 'animate-[moveRight_30s_linear_infinite]'}`}
+          className={`flex gap-0 ${direction === 'left' ? 'animate-[moveLeft_10s_linear_infinite]' : 'animate-[moveRight_10s_linear_infinite]'}`}
         >
           {repeatedItems.map((item, index) => (
             <div

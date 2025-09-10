@@ -1,4 +1,6 @@
+"use client";
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function About() {
   return (
@@ -12,13 +14,26 @@ export default function About() {
               <span className="font-semibold">18.9582° N</span>
               <span className="font-semibold">72.8321° E</span>
             </div>
-            <div className="mt-8 lg:mt-0 lg:ml-8 flex-1">
+            <div className="mt-8 lg:mt-0 lg:ml-8 flex-1 relative overflow-hidden">
               <Image
                 src="/sea-link.svg"
                 alt="Mumbai"
                 width={800}
                 height={500}
-                className="h-auto w-full"
+                className="h-auto w-full relative z-10"
+              />
+              <motion.img
+                src="/cars.svg"
+                alt="Cars"
+                className="absolute top-[89%] my-auto"
+                initial={{ x: "-100%" }}
+                animate={{ x: "100%" }}
+                transition={{
+                  duration: 20,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "linear",
+                }}
               />
             </div>
           </div>

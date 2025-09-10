@@ -19,7 +19,7 @@ export default function Nav() {
             <a href="/" className="flex-shrink-0 transition-opacity hover:opacity-80">
               <Image src="/logo.png" alt="Logo" width={50} height={50} priority />
             </a>
-            <div className="hidden items-center space-x-6 md:flex md:text-xl">
+            <div className="hidden items-center space-x-6 md:flex md:text-3xl">
               <Link href="/" className={getNavLinkStyles(pathname, '/')}>
                 Home
               </Link>
