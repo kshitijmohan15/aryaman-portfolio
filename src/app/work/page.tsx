@@ -7,6 +7,7 @@ import Image from 'next/image';
 
 const AnimatedBox = ({ href, text }: { href: string; text: string }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const controls = useAnimation();
 
   const getSvgPath = (text: string) => {
@@ -23,6 +24,16 @@ const AnimatedBox = ({ href, text }: { href: string; text: string }) => {
   };
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint in Tailwind
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
     controls.start({
       backgroundColor: isHovered ? "#FF0000" : "#000000",
       borderRadius: isHovered ? "50%" : "24px",
@@ -31,11 +42,13 @@ const AnimatedBox = ({ href, text }: { href: string; text: string }) => {
     });
   }, [isHovered, controls]);
 
+  const shouldShowSvg = isMobile || isHovered;
+
   return (
     <div
       className="relative aspect-square"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => !isMobile && setIsHovered(true)}
+      onMouseLeave={() => !isMobile && setIsHovered(false)}
     >
       <motion.div
         animate={controls}
@@ -45,7 +58,7 @@ const AnimatedBox = ({ href, text }: { href: string; text: string }) => {
           href={href}
           className="flex h-full w-full items-center justify-center"
         >
-          {isHovered && getSvgPath(text) ? (
+          {shouldShowSvg && getSvgPath(text) ? (
             <Image
               src={getSvgPath(text)}
               alt={text}

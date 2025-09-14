@@ -48,26 +48,41 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 md:hidden"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+
       <div 
         className={cn(
-          'absolute top-full left-0 right-0 md:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out',
-          isMobileMenuOpen ? 'max-h-[400px]' : 'max-h-0'
+          'fixed top-0 right-0 h-full w-80 max-w-[80vw] z-50 md:hidden transform transition-transform duration-300 ease-in-out',
+          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full',
+          pathname === '/about' 
+            ? 'bg-black text-white' 
+            : 'bg-white text-black shadow-xl'
         )}
       >
-        <div className={cn(
-          'border-t',
-          pathname === '/about' 
-            ? 'bg-black text-white border-white/10' 
-            : 'bg-white border-gray-100'
-        )}>
-          <div className="mx-auto w-full max-w-7xl px-4">
-            <div className="flex flex-col py-8 space-y-6">
+        <div className="flex flex-col h-full">
+          <div className="flex items-center justify-between p-6 border-b border-gray-200/20">
+            <Image src="/logo.png" alt="Logo" width={40} height={40} />
+            <button 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="p-2 rounded-lg hover:bg-gray-100/10 transition-colors"
+              aria-label="Close menu"
+            >
+              <X className="h-6 w-6" />
+            </button>
+          </div>
+          
+          <nav className="flex-1 px-6 py-8">
+            <div className="flex flex-col space-y-8">
               <Link 
                 href="/" 
                 className={cn(
-                  'text-lg transition-colors duration-200',
-                  getNavLinkStyles(pathname, '/')
+                  'text-2xl font-light transition-colors duration-200 hover:opacity-80',
+                  pathname === '/' && 'font-bold'
                 )}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -76,8 +91,8 @@ export default function Nav() {
               <Link 
                 href="/work" 
                 className={cn(
-                  'text-lg transition-colors duration-200',
-                  getNavLinkStyles(pathname, '/work')
+                  'text-2xl font-light transition-colors duration-200 hover:opacity-80',
+                  pathname.startsWith('/work') && 'font-bold'
                 )}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -86,8 +101,8 @@ export default function Nav() {
               <Link 
                 href="/about" 
                 className={cn(
-                  'text-lg transition-colors duration-200',
-                  getNavLinkStyles(pathname, '/about')
+                  'text-2xl font-light transition-colors duration-200 hover:opacity-80',
+                  pathname === '/about' && 'font-bold'
                 )}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -96,15 +111,15 @@ export default function Nav() {
               <Link 
                 href="/contact" 
                 className={cn(
-                  'text-lg transition-colors duration-200',
-                  getNavLinkStyles(pathname, '/contact')
+                  'text-2xl font-light transition-colors duration-200 hover:opacity-80',
+                  pathname === '/contact' && 'font-bold'
                 )}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
               </Link>
             </div>
-          </div>
+          </nav>
         </div>
       </div>
     </nav>

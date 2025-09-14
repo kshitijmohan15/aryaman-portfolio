@@ -65,7 +65,7 @@ export default function About() {
               <Image src="/headshot.png" alt="Me" width={397} height={397} className="w-[300px] lg:w-[397px] h-auto" />
             </div>
             <div className="flex flex-col gap-6">
-              <p className="w-full lg:w-[700px] text-lg lg:text-xl leading-6 font-light">
+              <p className="w-full lg:w-[700px] text-lg lg:text-xl leading-6 font-light text-center lg:text-left">
                 Born and raised in Mumbai, I&apos;m currently studying <b>Industrial Design</b> at the <strong>National Institute of Design, Andhra Pradesh</strong>.
                 <br />
                 <br />
