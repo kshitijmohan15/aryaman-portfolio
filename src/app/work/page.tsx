@@ -3,10 +3,24 @@ import Link from 'next/link';
 import CircleGrid from '@/components/custom/circle-grid';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const AnimatedBox = ({ href, text }: { href: string; text: string }) => {
   const [isHovered, setIsHovered] = useState(false);
   const controls = useAnimation();
+
+  const getSvgPath = (text: string) => {
+    switch (text.toLowerCase()) {
+      case 'design':
+        return '/work/design.svg';
+      case 'creative':
+        return '/work/creative.svg';
+      case 'photography':
+        return '/work/photography.svg';
+      default:
+        return '';
+    }
+  };
 
   useEffect(() => {
     controls.start({
@@ -31,7 +45,17 @@ const AnimatedBox = ({ href, text }: { href: string; text: string }) => {
           href={href}
           className="flex h-full w-full items-center justify-center"
         >
-          <span className="text-4xl md:text-5xl font-bold text-white">{text}</span>
+          {isHovered && getSvgPath(text) ? (
+            <Image
+              src={getSvgPath(text)}
+              alt={text}
+              width={300}
+              height={80}
+              className="object-contain"
+            />
+          ) : (
+            <span className="text-4xl md:text-5xl font-bold text-white">{text}</span>
+          )}
         </Link>
       </motion.div>
     </div>
@@ -45,8 +69,10 @@ export default function Work() {
         <AnimatedBox href="/work/design" text="Design" />
         <AnimatedBox href="/work/creative" text="Creative" />
         <AnimatedBox href="/work/photography" text="Photography" />
-        <div className="aspect-square">
+        <div className="aspect-square w-full h-full flex items-center justify-center">
+          <div className="w-3/4 h-3/4">
           <CircleGrid />
+          </div>
         </div>
       </div>
     </div>

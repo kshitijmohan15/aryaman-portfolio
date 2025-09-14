@@ -16,11 +16,11 @@ export default function DesignPage() {
             whileHover={{ scale: 1.2 }}
             transition={{ duration: 0.2 }}
           >
-            <MoveLeft className='text-red-500 w-10 h-10 hover:text-black transition-colors duration-200'></MoveLeft>
+            <MoveLeft className='text-red-500 w-16 h-16 hover:text-black transition-colors duration-200'></MoveLeft>
           </motion.div>
         </Link>
         <div className="flex items-center gap-4 w-full justify-between">
-          <h1 className="text-4xl font-bold">Design</h1>
+          <h1 className="text-5xl font-bold">Design</h1>
           <motion.div
           className="h-10 w-10"
           animate={{ rotate: 360 }}
@@ -43,50 +43,74 @@ export default function DesignPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Link href="https://www.behance.net/gallery/234089743/RythuSetu-Interaction-Design" target="_blank">
-          <Card className="overflow-hidden">
-            <Image
-              src="/design/rhytu-setu.png"
-              alt="Rhytu Setu App"
-              width={600}
-              height={400}
-              className="w-full h-auto object-cover"
-            />
+          <Card>
+            <div className="relative group">
+              <Image
+                src="/design/rhytu-setu.png"
+                alt="Rhytu Setu App"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover transition-transform duration-300 "
+              />
+              <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-4">
+                <h3 className="text-white text-2xl font-bold text-right">Rythusetu</h3>
+                <p className="text-white text-lg text-right">Interaction Design</p>
+              </div>
+            </div>
           </Card>
         </Link>
 
         <Link href="https://www.behance.net/gallery/219725261/Technically-Complex-Product-LYNA" target="_blank">
-          <Card className="overflow-hidden">
-            <Image
-              src="/design/lyna.png"
-              alt="Lyna Lighting Solutions"
-              width={600}
-              height={400}
-              className="w-full h-auto object-cover"
-            />
+          <Card>
+            <div className="relative group">
+              <Image
+                src="/design/lyna.png"
+                alt="Lyna Lighting Solutions"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover transition-transform duration-300 "
+              />
+              <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-4">
+                <h3 className="text-white text-2xl font-bold text-right">LYNA</h3>
+                <p className="text-white text-lg text-right">Technically Complex Product</p>
+              </div>
+            </div>
           </Card>
         </Link>
 
         <Link href="https://www.behance.net/gallery/220504349/Prepr-Entrepreneurship" target="_blank">
-          <Card className="overflow-hidden">
-            <Image
-              src="/design/prepr.png"
-              alt="Prepr Branding"
-              width={600}
-              height={400}
-              className="w-full h-auto object-cover"
-            />
+          <Card>
+            <div className="relative group">
+              <Image
+                src="/design/prepr.png"
+                alt="Prepr Branding"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover transition-transform duration-300 "
+              />
+              <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-4">
+                <h3 className="text-white text-2xl font-bold text-right">Prepr</h3>
+                <p className="text-white text-lg text-right">Entrepreneurship</p>
+              </div>
+            </div>
           </Card>
         </Link>
 
         <Link href="https://www.behance.net/gallery/220434297/Systems-Thinking-Farmers-Welfare-in-AP" target="_blank">
-          <Card className="overflow-hidden">
-            <Image
-              src="/design/farmers.png"
-              alt="Farmer Well-being Study"
-              width={600}
-              height={400}
-              className="w-full h-auto object-cover"
-            />
+          <Card>
+            <div className="relative group">
+              <Image
+                src="/design/farmers.png"
+                alt="Farmer Well-being Study"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover transition-transform duration-300 "
+              />
+              <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-4">
+                <h3 className="text-white text-2xl font-bold text-right">A Study About Farmers Welfare</h3>
+                <p className="text-white text-lg text-right">System Thinking</p>
+              </div>
+            </div>
           </Card>
         </Link>
       </div>

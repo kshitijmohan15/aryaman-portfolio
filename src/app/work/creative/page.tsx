@@ -16,11 +16,11 @@ export default function CreativePage() {
             whileHover={{ scale: 1.2 }}
             transition={{ duration: 0.2 }}
           >
-            <MoveLeft className="h-10 w-10 text-red-500 hover:text-black transition-colors duration-200"></MoveLeft>
+            <MoveLeft className="h-16 w-16 text-red-500 hover:text-black transition-colors duration-200"></MoveLeft>
           </motion.div>
         </Link>
         <div className="flex items-center gap-4 w-full justify-between">
-          <h1 className="text-4xl font-bold">Creative</h1>
+          <h1 className="text-5xl font-bold">Creative</h1>
           <motion.div
             className="h-10 w-10"
             animate={{ rotate: 360 }}
@@ -42,34 +42,52 @@ export default function CreativePage() {
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        <Card className="overflow-hidden">
-          <Image
-            src="/creative/hey-painting.png"
-            alt="Hey Painting"
-            width={600}
-            height={400}
-            className="h-auto w-full object-cover"
-          />
+        <Card>
+          <div className="relative group">
+            <Image
+              src="/creative/hey-painting.png"
+              alt="Hey Painting"
+              width={600}
+              height={400}
+              className="h-auto w-full object-cover transition-transform duration-300"
+            />
+            <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-4">
+              <h3 className="text-white text-2xl font-bold text-right">In Love With The Concept Of Myself</h3>
+              <p className="text-white text-lg text-right">A Series Of Mix Medium Paintings</p>
+            </div>
+          </div>
         </Card>
 
-        <Card className="overflow-hidden">
-          <Image
-            src="/creative/back-painting.png"
-            alt="Back Painting"
-            width={600}
-            height={400}
-            className="h-auto w-full object-cover"
-          />
+        <Card>
+          <div className="relative group">
+            <Image
+              src="/creative/back-painting.png"
+              alt="Back Painting"
+              width={600}
+              height={400}
+              className="h-auto w-full object-cover transition-transform duration-300"
+            />
+            <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-4">
+              <h3 className="text-white text-2xl font-bold text-right">Visual Development</h3>
+              <p className="text-white text-lg text-right">Paintings Made On Procreate</p>
+            </div>
+          </div>
         </Card>
 
-        <Card className="overflow-hidden">
-          <Image
-            src="/creative/red-painting.png"
-            alt="Red Painting"
-            width={600}
-            height={400}
-            className="h-auto w-full object-cover"
-          />
+        <Card>
+          <div className="relative group">
+            <Image
+              src="/creative/red-painting.png"
+              alt="Red Painting"
+              width={600}
+              height={400}
+              className="h-auto w-full object-cover transition-transform duration-300"
+            />
+            <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-4">
+              <h3 className="text-white text-2xl font-bold text-right">Anti-Design?</h3>
+              <p className="text-white text-lg text-right">A Series Of Self Aware Design Posters</p>
+            </div>
+          </div>
         </Card>
       </div>
       <CircleFooter />

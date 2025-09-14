@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function About() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <div className="mx-auto max-w-7xl px-4 py-12">
+      <div className="mx-auto max-w-7xl px-4 pt-6">
         <section>
           <div className="flex flex-col lg:flex-row w-full items-center justify-between">
             <div className="flex flex-col gap-2 text-3xl lg:text-5xl font-bold">
@@ -26,13 +26,27 @@ export default function About() {
                 src="/cars.svg"
                 alt="Cars"
                 className="absolute top-[89%] my-auto"
-                initial={{ x: "-100%" }}
-                animate={{ x: "100%" }}
+                initial={{ x: "100%" }}
+                animate={{ x: "-100%" }}
                 transition={{
-                  duration: 20,
+                  duration: 8,
                   repeat: Infinity,
                   repeatType: "loop",
                   ease: "linear",
+                }}
+              />
+              <motion.img
+                src="/cars.svg"
+                alt="Cars"
+                className="absolute top-[89%] my-auto"
+                initial={{ x: "110%" }}
+                animate={{ x: "-100%" }}
+                transition={{
+                  duration: 8,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "linear",
+                  delay: 4,
                 }}
               />
             </div>

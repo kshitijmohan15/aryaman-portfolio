@@ -12,14 +12,14 @@ export default function Nav() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className={cn('py-4 relative', pathname === '/about' && 'bg-black text-white')}>
+    <nav className={cn('py-2 relative', pathname === '/about' && 'bg-black text-white')}>
       <div className="mx-auto w-full max-w-7xl px-4">
         <div className="flex h-16 items-center">
           <div className="flex w-full items-center justify-between gap-8">
             <a href="/" className="flex-shrink-0 transition-opacity hover:opacity-80">
               <Image src="/logo.png" alt="Logo" width={50} height={50} priority />
             </a>
-            <div className="hidden items-center space-x-6 md:flex md:text-3xl">
+            <div className="hidden items-center space-x-6 md:flex md:text-2xl">
               <Link href="/" className={getNavLinkStyles(pathname, '/')}>
                 Home
               </Link>

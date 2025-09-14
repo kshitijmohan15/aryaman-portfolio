@@ -1,11 +1,21 @@
+"use client";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const [isAboutPage, setIsAboutPage] = useState(false);
+
+  useEffect(() => {
+    setIsAboutPage(pathname === "/about");
+  }, [pathname]);
+
   return (
-    <footer className="border-foreground/10 border-t bg-black py-6 md:py-8">
+    <footer className={`border-foreground/10 border-t py-6 md:py-8 ${isAboutPage ? 'bg-white' : 'bg-black'}`}>
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex flex-col-reverse space-y-reverse space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
-          <p className="text-xs md:text-sm text-white text-center md:text-left">
+          <p className={`text-xs md:text-sm text-center md:text-left ${isAboutPage ? 'text-black' : 'text-white'}`}>
             © 2025 by Aryaman Saudagar. All Rights Reserved.
           </p>
           <div className="flex items-center justify-center space-x-4 md:space-x-6">
@@ -20,7 +30,7 @@ export default function Footer() {
                 alt="Instagram"
                 width={20}
                 height={20}
-                className="md:w-6 md:h-6"
+                className={`md:w-6 md:h-6 ${isAboutPage ? 'invert' : ''}`}
               />
             </a>
             <a
@@ -34,7 +44,7 @@ export default function Footer() {
                 alt="LinkedIn"
                 width={20}
                 height={20}
-                className="md:w-6 md:h-6"
+                className={`md:w-6 md:h-6 ${isAboutPage ? 'invert' : ''}`}
               />
             </a>
             <a
@@ -48,7 +58,7 @@ export default function Footer() {
                 alt="Behance"
                 width={20}
                 height={20}
-                className="md:w-6 md:h-6"
+                className={`md:w-6 md:h-6 ${isAboutPage ? 'invert' : ''}`}
               />
             </a>
           </div>

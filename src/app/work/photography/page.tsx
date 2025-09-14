@@ -16,11 +16,11 @@ export default function PhotographyPage() {
             whileHover={{ scale: 1.2 }}
             transition={{ duration: 0.2 }}
           >
-            <MoveLeft className='text-red-500 w-10 h-10 hover:text-black transition-colors duration-200'></MoveLeft>
+            <MoveLeft className='text-red-500 w-16 h-16 hover:text-black transition-colors duration-200'></MoveLeft>
           </motion.div>
         </Link>
         <div className="flex items-center gap-4 w-full justify-between">
-          <h1 className="text-4xl font-bold">Photography</h1>
+          <h1 className="text-5xl font-bold">Photography</h1>
           <motion.div
           className="h-10 w-10"
           animate={{ rotate: 360 }}
@@ -43,14 +43,20 @@ export default function PhotographyPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Link href="https://www.behance.net/gallery/220634987/Lanchi-Photo-Gallery">
-          <Card className="overflow-hidden cursor-pointer">
-            <Image
-              src="/photography/lanchi.png"
-            alt="Lanchi Photography"
-            width={600}
-            height={400}
-            className="w-full h-auto object-cover"
-            />
+          <Card>
+            <div className="relative group">
+              <Image
+                src="/photography/lanchi.png"
+                alt="Lanchi Photography"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover transition-transform duration-300"
+              />
+              <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-4">
+                <h3 className="text-white text-2xl font-bold text-right">A Visit To Lanchi</h3>
+                <p className="text-white text-lg text-right">Photo Gallery</p>
+              </div>
+            </div>
           </Card>
         </Link>
       </div>
