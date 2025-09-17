@@ -12,7 +12,7 @@ export default function Nav() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className={cn('py-2 relative', pathname === '/about' && 'bg-black text-white')}>
+    <nav className={cn('py-6 relative', pathname === '/about' && 'bg-black text-white')}>
       <div className="mx-auto w-full max-w-7xl px-4">
         <div className="flex h-16 items-center">
           <div className="flex w-full items-center justify-between gap-8">
@@ -76,7 +76,7 @@ export default function Nav() {
             </button>
           </div>
           
-          <nav className="flex-1 px-6 py-8">
+          <nav className="flex-1 px-6 py-12">
             <div className="flex flex-col space-y-8">
               <Link 
                 href="/" 

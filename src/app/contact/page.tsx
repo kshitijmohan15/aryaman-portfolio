@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 
 export default function Contact() {
   return (
-    <div className="mx-auto max-w-7xl pt-16 px-4 sm:pl-4">
+    <div className="mx-auto max-w-7xl pt-0 px-4 sm:pl-4">
       <section className="overflow-hidden">
-        <div className="flex w-max animate-[scrollText_15s_linear_infinite]">
+        <div className="flex w-max animate-[scrollText_20s_linear_infinite]">
           <h1 className="text-[32px] sm:text-[44px] font-[700] tracking-[0%] whitespace-nowrap mr-8">
             <span>Let's connect</span> •<span className="text-[#ED1C24]"> कनेक्ट करूया</span> •{' '}
             <span>Let's connect</span> • <span className="text-[#ED1C24]">कनेक्ट करते हैं</span> •{' '}
@@ -52,9 +52,9 @@ export default function Contact() {
             <div className="flex w-full justify-end">
               <button
                 type="submit"
-                className="w-fit rounded-md bg-black px-6 py-2 text-white hover:bg-black/90"
+                className="w-fit px-10 py-2 text-white rounded-full bg-red-500 cursor-pointer"
               >
-                Contact Me!
+                Submit
               </button>
             </div>
           </form>
@@ -70,9 +70,9 @@ export default function Contact() {
             <p className="text-base font-light">Mumbai, Maharashtra, India</p>
           </div>
           <div className="mt-8 flex gap-4">
-            <Image src="/instagram.svg" alt="Instagram" width={24} height={24} />
+            <Image src="/instagram.svg" alt="Instagram" width={28} height={28} />
             <Image src="/linkedin.svg" alt="LinkedIn" width={24} height={24} />
-            <Image src="/behance.svg" alt="Behance" width={24} height={24} />
+            <Image src="/behance.svg" alt="Behance" width={28} height={28} />
           </div>
           <Image
             src="/star.svg"

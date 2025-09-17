@@ -86,7 +86,7 @@ export default function About() {
           </div>
         </section>
           <section className="mt-16 w-full">
-            <div className="flex flex-col w-full">
+            <div className="flex flex-col w-full pb-[6rem]">
               {/* First row - 6 images */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 w-full">
                 {[1,2,3,4,5,6].map((num) => (
