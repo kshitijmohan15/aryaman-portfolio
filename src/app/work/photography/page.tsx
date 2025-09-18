@@ -52,7 +52,7 @@ export default function PhotographyPage() {
                 height={400}
                 className="w-full h-auto object-cover transition-transform duration-300"
               />
-              <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-4">
+              <div className="absolute bottom-0 left-0 right-0 h-[25%] bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center px-4 py-2 md:py-3 min-[928px]:py-4 lg:py-6">
                 <h3 className="text-white text-2xl font-bold text-right">A Visit To Lanchi</h3>
                 <p className="text-white text-lg text-right">Photo Gallery</p>
               </div>
