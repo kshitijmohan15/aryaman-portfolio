@@ -42,6 +42,7 @@ export default function CreativePage() {
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <Link href="https://www.behance.net/gallery/234075191/Anti-Design-Posters" target="_blank">
         <Card>
           <div className="relative group">
             <Image
@@ -58,7 +59,7 @@ export default function CreativePage() {
             </div>
           </div>
         </Card>
-
+        </Link>
         <Card>
           <div className="relative group">
             <Image
