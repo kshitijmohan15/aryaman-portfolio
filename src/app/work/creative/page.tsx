@@ -60,7 +60,7 @@ export default function CreativePage() {
           </div>
         </Card>
         </Link>
-        <Card>
+        {/* <Card>
           <div className="relative group">
             <Image
               src="/creative/back-painting.png"
@@ -91,7 +91,7 @@ export default function CreativePage() {
               
             </div>
           </div>
-        </Card>
+        </Card> */}
       </div>
       <CircleFooter />
     </main>
