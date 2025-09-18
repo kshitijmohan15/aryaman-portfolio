@@ -113,6 +113,24 @@ export default function DesignPage() {
             </div>
           </Card>
         </Link>
+
+        <Link href="https://www.behance.net/gallery/219755251/Colour-Material-And-Finish" target="_blank">
+          <Card>
+            <div className="relative group">
+              <Image
+                src="/design/bottles.png"
+                alt="Water Bottle Concepts"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover transition-transform duration-300 "
+              />
+              <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-4">
+                <h3 className="text-white text-2xl font-bold text-right">Water Bottle Concepts</h3>
+                <p className="text-white text-lg text-right">Color, Design and Finish</p>
+              </div>
+            </div>
+          </Card>
+        </Link>
       </div>
       <CircleFooter />
     </main>
