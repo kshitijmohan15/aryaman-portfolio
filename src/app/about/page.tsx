@@ -70,7 +70,7 @@ export default function About() {
                 className="w-[360px] md:w-[450px] lg:w-[550px] xl:w-[650px] h-auto" 
               />
             </div>
-            <div className="flex flex-col gap-8 items-center lg:items-start lg:w-[1000px]">
+            <div className="flex flex-col gap-8 items-center lg:items-start lg:w-[1500px]">
               <p className="w-full text-lg lg:text-xl leading-6 font-light text-center lg:text-left">
                 Born and raised in Mumbai, I&apos;m currently studying <b>Industrial Design</b> at the <strong>National Institute of Design, Andhra Pradesh</strong>.
                 <br />
