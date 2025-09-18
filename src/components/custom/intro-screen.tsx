@@ -4,15 +4,23 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
+// This will be reset on every page reload
+let isFirstLoad = true;
+
 export default function IntroScreen() {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-    }, 1000);
+    if (isFirstLoad) {
+      setIsVisible(true);
+      isFirstLoad = false;
+      
+      const timer = setTimeout(() => {
+        setIsVisible(false);
+      }, 1000);
 
-    return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   return (
