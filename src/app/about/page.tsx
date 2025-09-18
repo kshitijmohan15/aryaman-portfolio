@@ -53,8 +53,8 @@ export default function About() {
           </div>
         </section>
         <section className="mt-16">
-          <div className="flex flex-col lg:flex-row w-full items-end gap-8 lg:gap-16">
-            <div className="relative">
+          <div className="flex flex-col lg:flex-row w-full items-center lg:items-end gap-8 lg:gap-16">
+            <div className="relative flex justify-center">
               <Image
                 src="/star.svg"
                 alt="Me"
@@ -64,8 +64,8 @@ export default function About() {
               />
               <Image src="/headshot.png" alt="Me" width={360} height={360} className="w-[300px] lg:w-[397px] h-auto" />
             </div>
-            <div className="flex flex-col gap-8">
-              <p className="w-full lg:w-[700px] text-lg lg:text-xl leading-6 font-light text-center lg:text-left">
+            <div className="flex flex-col gap-8 items-center lg:items-start">
+              <p className="w-full text-lg lg:text-xl leading-6 font-light text-center lg:text-left">
                 Born and raised in Mumbai, I&apos;m currently studying <b>Industrial Design</b> at the <strong>National Institute of Design, Andhra Pradesh</strong>.
                 <br />
                 <br />
