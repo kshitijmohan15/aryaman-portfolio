@@ -42,7 +42,7 @@ export default function PhotographyPage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Link href="https://www.behance.net/gallery/220634987/Lanchi-Photo-Gallery">
+        <Link href="https://www.behance.net/gallery/220634987/Lanchi-Photo-Gallery" target="_blank">
           <Card>
             <div className="relative group">
               <Image
