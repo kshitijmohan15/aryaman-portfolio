@@ -1,11 +1,15 @@
+'use client';
+
 import Image from "next/image";
 import Card from "@/components/ui/card";
 import MovingCircles from "@/components/custom/moving-circles";
 import Link from "next/link";
+import IntroScreen from "@/components/custom/intro-screen";
 
 export default function Home() {
   return (
     <div className="">
+      <IntroScreen />
       <section className="mx-auto max-w-7xl mt-2">
         <Card className="border-foreground/10 rounded-3xl border-2 py-16 m-6 md:m-0">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
