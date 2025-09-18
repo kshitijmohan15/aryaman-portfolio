@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { cn } from '@/utils/cn';
 import { getNavLinkStyles } from '@/utils/nav-link';
 import { useState } from 'react';
+import Sidebar from './sidebar';
 
 export default function Nav() {
   const pathname = usePathname();
@@ -48,80 +49,7 @@ export default function Nav() {
         </div>
       </div>
 
-      {isMobileMenuOpen && (
-        <div 
-          className="fixed inset-0 bg-black/50 z-40 md:hidden"
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
-      )}
-
-      <div 
-        className={cn(
-          'fixed top-0 right-0 h-full w-80 max-w-[80vw] z-50 md:hidden transform transition-transform duration-300 ease-in-out',
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full',
-          pathname === '/about' 
-            ? 'bg-black text-white' 
-            : 'bg-white text-black shadow-xl'
-        )}
-      >
-        <div className="flex flex-col h-full">
-          <div className="flex items-center justify-between p-6 border-b border-gray-200/20">
-            <Image src="/logo.png" alt="Logo" width={40} height={40} />
-            <button 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="p-2 rounded-lg hover:bg-gray-100/10 transition-colors"
-              aria-label="Close menu"
-            >
-              <X className="h-6 w-6" />
-            </button>
-          </div>
-          
-          <nav className="flex-1 px-6 py-12">
-            <div className="flex flex-col space-y-8">
-              <Link 
-                href="/" 
-                className={cn(
-                  'text-2xl font-light transition-colors duration-200 hover:opacity-80',
-                  pathname === '/' && 'font-bold'
-                )}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <Link 
-                href="/work" 
-                className={cn(
-                  'text-2xl font-light transition-colors duration-200 hover:opacity-80',
-                  pathname.startsWith('/work') && 'font-bold'
-                )}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Work
-              </Link>
-              <Link 
-                href="/about" 
-                className={cn(
-                  'text-2xl font-light transition-colors duration-200 hover:opacity-80',
-                  pathname === '/about' && 'font-bold'
-                )}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link 
-                href="/contact" 
-                className={cn(
-                  'text-2xl font-light transition-colors duration-200 hover:opacity-80',
-                  pathname === '/contact' && 'font-bold'
-                )}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Contact
-              </Link>
-            </div>
-          </nav>
-        </div>
-      </div>
+      <Sidebar isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} pathname={pathname} />
     </nav>
   );
 }

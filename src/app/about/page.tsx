@@ -29,7 +29,7 @@ export default function About() {
                 initial={{ x: "100%" }}
                 animate={{ x: "-100%" }}
                 transition={{
-                  duration: 8,
+                  duration: 15,
                   repeat: Infinity,
                   repeatType: "loop",
                   ease: "linear",
@@ -42,7 +42,7 @@ export default function About() {
                 initial={{ x: "110%" }}
                 animate={{ x: "-100%" }}
                 transition={{
-                  duration: 8,
+                  duration: 15,
                   repeat: Infinity,
                   repeatType: "loop",
                   ease: "linear",
@@ -62,7 +62,7 @@ export default function About() {
                 height={56}
                 className="absolute -top-10 -right-10"
               />
-              <Image src="/headshot.png" alt="Me" width={397} height={397} className="w-[300px] lg:w-[397px] h-auto" />
+              <Image src="/headshot.png" alt="Me" width={360} height={360} className="w-[300px] lg:w-[397px] h-auto" />
             </div>
             <div className="flex flex-col gap-6">
               <p className="w-full lg:w-[700px] text-lg lg:text-xl leading-6 font-light text-center lg:text-left">
@@ -77,8 +77,9 @@ export default function About() {
                 A lifelong superhero fan and lover of films, I approach design with empathy, imagination, and a strong moral compass believing it can drive meaningful change at every level of interaction.
               </p>
               <button
+                onClick={() => window.open('https://storage.googleapis.com/portfolio-pdfs-dev/aryaman-portfolio/pdfs/cv.pdf', '_blank')}
                 type="button"
-                className="w-fit cursor-pointer rounded-full border-[1px] border-white px-8 py-1"
+                className="w-fit cursor-pointer rounded-full border-[1px] border-white px-8 py-1 hover:bg-red-500 hover:text-white hover:border-red-500 transition-colors duration-200 font-light"
               >
                 View CV
               </button>
