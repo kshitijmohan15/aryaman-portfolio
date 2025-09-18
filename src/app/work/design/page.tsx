@@ -126,7 +126,7 @@ export default function DesignPage() {
               />
               <div className="absolute bottom-0 left-0 right-0 h-[25%] bg-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center px-4 py-2 md:py-3 min-[928px]:py-4 lg:py-6">
                 <h3 className="text-white text-2xl font-bold text-right">Water Bottle Concepts</h3>
-                <p className="text-white text-lg text-right">Color, Material and Finish</p>
+                <p className="text-white text-lg text-right">Colour, Material and Finish</p>
               </div>
             </div>
           </Card>
