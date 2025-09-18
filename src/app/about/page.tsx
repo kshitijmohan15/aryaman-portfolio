@@ -77,7 +77,7 @@ export default function About() {
                 A lifelong superhero fan and lover of films, I approach design with empathy, imagination, and a strong moral compass believing it can drive meaningful change at every level of interaction.
               </p>
               <button
-                onClick={() => window.open('https://storage.googleapis.com/portfolio-pdfs-dev/aryaman-portfolio/pdfs/cv.pdf', '_blank')}
+                onClick={() => window.open('https://storage.googleapis.com/portfolio-pdfs-dev/aryaman-portfolio/pdfs/cv1.pdf', '_blank')}
                 type="button"
                 className="w-fit cursor-pointer rounded-full border-[1px] border-white px-8 py-1 hover:bg-red-500 hover:text-white hover:border-red-500 transition-colors duration-200 font-light"
               >
